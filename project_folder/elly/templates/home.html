@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - School Website</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'admin:index' %}">Login</a>
+        <a href="{% url 'admin:index' %}">Admin</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <img src="{% static 'images/school_building.png' %}" alt="School Building">
+        </div>
+        <div class="section">
+            <h2>About Our School</h2>
+            <p>
+                Our school is committed to providing a nurturing and engaging environment for all students. We strive for excellence in academics, arts, and athletics.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Our Mission</h2>
+            <p>
+                To inspire and empower students to become lifelong learners and responsible citizens. We focus on holistic development and ensure every student reaches their full potential.
+            </p>
+        </div>
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>
+                Have questions? Reach out to us via our <a href="{% url 'contact' %}">contact page</a> or visit our office during working hours.
+            </p>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2024 Our School. All rights reserved.
+    </footer>
+</body>
+</html>
